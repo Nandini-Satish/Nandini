@@ -7,7 +7,5 @@ services:
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    envVars:
-  - key: DATABASE_URL
-    value: mongodb+srv://Nandini_1:RDPsXmSCQwDmkXDi@cluster0.mongodb.net/fastapi_assignment?retryWrites=true&w=majority
-
+    env:
+      DATABASE_URL: mongodb+srv://Nandini_1:RDPsXmSCQwDmkXDi@cluster0.mongodb.net/fastapi_assignment?retryWrites=true&w=majority
