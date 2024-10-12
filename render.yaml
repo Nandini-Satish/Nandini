@@ -1,11 +1,10 @@
-version: 1
+version: "1"
 services:
   - type: web
     name: fastapi-app
-    env: python
     plan: free
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    env:
+    envVars:
       DATABASE_URL: mongodb+srv://Nandini_1:RDPsXmSCQwDmkXDi@cluster0.mongodb.net/fastapi_assignment?retryWrites=true&w=majority
